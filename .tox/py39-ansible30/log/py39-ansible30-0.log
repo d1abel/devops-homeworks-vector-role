@@ -1,4 +1,0 @@
-action: py39-ansible30, msg: getenv
-cwd: /opt/vector-role/.tox
-cmd: /usr/bin/python3 -m virtualenv --no-download --python /usr/local/bin/python3.9 py39-ansible30
-OSError: [Errno 71] Protocol error: '/usr/local/bin/python3.9' -> '/opt/vector-role/.tox/py39-ansible30/bin/python'
