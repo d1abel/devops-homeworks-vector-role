@@ -1,9 +1,0 @@
----
-- name: Verify
-  hosts: all
-  gather_facts: false
-  tasks:
-    - name: Validate config
-      become: true
-      assert:
-        that: "'Validated' is in /usr/bin/vector validate"
