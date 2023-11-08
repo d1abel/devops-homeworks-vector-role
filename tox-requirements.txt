@@ -1,0 +1,7 @@
+selinux
+ansible-lint==6.13.1
+yamllint==1.32.0
+lxml
+molecule==4.0.4
+molecule_docker
+jmespath

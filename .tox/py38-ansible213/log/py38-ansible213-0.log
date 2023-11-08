@@ -1,0 +1,4 @@
+action: py38-ansible213, msg: getenv
+cwd: /opt/vector-role/.tox
+cmd: /usr/bin/python3 -m virtualenv --no-download --python /usr/local/bin/python3.8 py38-ansible213
+OSError: [Errno 71] Protocol error: '/usr/local/bin/python3.8' -> '/opt/vector-role/.tox/py38-ansible213/bin/python'

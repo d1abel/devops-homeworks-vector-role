@@ -1,0 +1,4 @@
+action: py37-ansible210, msg: getenv
+cwd: /opt/vector-role/.tox
+cmd: /usr/bin/python3 -m virtualenv --no-download --python /usr/local/bin/python3.7 py37-ansible210
+OSError: [Errno 71] Protocol error: '/usr/local/bin/python3.7' -> '/opt/vector-role/.tox/py37-ansible210/bin/python'
