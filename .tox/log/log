@@ -1,0 +1,32 @@
+vagrant@server7:/devops/mnt-homeworks/08-ansible-02-playbook/playbook/vector-role$ tox
+py38-ansible213: internal error
+Traceback (most recent call last):
+  File "/home/vagrant/.local/lib/python3.8/site-packages/tox/session/cmd/run/single.py", line 46, in _evaluate
+    tox_env.setup()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/tox/tox_env/api.py", line 247, in setup
+    self._setup_env()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/tox/tox_env/python/runner.py", line 107, in _setup_env
+    super()._setup_env()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/tox/tox_env/python/api.py", line 199, in _setup_env
+    self.ensure_python_env()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/tox/tox_env/python/api.py", line 206, in ensure_python_env
+    self.create_python_env()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/tox/tox_env/python/virtual_env/api.py", line 129, in create_python_env
+    self.session.run()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/virtualenv/run/session.py", line 44, in run
+    self._create()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/virtualenv/run/session.py", line 51, in _create
+    self.creator.run()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/virtualenv/create/creator.py", line 158, in run
+    self.create()
+  File "/home/vagrant/.local/lib/python3.8/site-packages/virtualenv/create/via_global_ref/builtin/via_global_self_do.py", line 95, in create
+    src.run(self, self.symlinks)
+  File "/home/vagrant/.local/lib/python3.8/site-packages/virtualenv/create/via_global_ref/builtin/ref.py", line 153, in run
+    method(self.src, dest)
+  File "/home/vagrant/.local/lib/python3.8/site-packages/virtualenv/util/path/_sync.py", line 33, in symlink
+    dest.symlink_to(src, target_is_directory=src.is_dir())
+  File "/usr/lib/python3.8/pathlib.py", line 1384, in symlink_to
+    self._accessor.symlink(target, self, target_is_directory)
+  File "/usr/lib/python3.8/pathlib.py", line 446, in symlink
+    return os.symlink(a, b)
+OSError: [Errno 71] Protocol error: '/usr/bin/python3' -> '/devops/mnt-homeworks/08-ansible-02-playbook/playbook/vector-role/.tox/py38-ansible213/bin/python'
