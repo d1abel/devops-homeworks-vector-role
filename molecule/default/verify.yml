@@ -1,0 +1,27 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+
+  - name: Check config
+    command: /usr/bin/vector validate
+    register: validate
+
+  - name: Check Vector state
+    command: systemctl status vector
+    register: status
+
+  - name: Validate config
+    ansible.builtin.assert:
+      that:
+        - "'Validated' is in validate.stdout"
+      fail_msg: "Config validation failed"
+      success_msg: "Config is ok"
+
+  - name: Validate service state
+    ansible.builtin.assert:
+      that:
+        - "'running' is in status.stdout"
+      fail_msg: "Service is not running"
+      success_msg: "Service is running"
